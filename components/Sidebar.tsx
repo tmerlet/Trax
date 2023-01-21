@@ -33,8 +33,6 @@ const musicMenu = [
   { name: 'Favourites', icon: MdFavorite, route: '/favorite' },
 ]
 
-// const playlists = new Array(30).fill(1).map((_, i) => `Playlist ${i + 1}`)
-
 const SideBar = () => {
   const { playlists } = usePlaylist()
   return (
