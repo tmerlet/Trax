@@ -10,7 +10,8 @@ export const validateRoute = (handler) => {
       let user
 
       try {
-        const { id } = jwt.veryify(token, 'JWTSECRET')
+        const { id } = jwt.verify(token, 'JWTSECRET')
+
         user = await prisma.user.findUnique({
           where: { id },
         })

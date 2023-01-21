@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import React, { FC, useState } from 'react'
 import NextImage from 'next/image'
 import { Box, Flex, Input, Button } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
