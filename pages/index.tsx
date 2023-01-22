@@ -12,7 +12,7 @@ const Home = ({ artists }) => {
       subtitle="profile"
       title={user && `${user?.firstName} ${user?.lastName}`}
       description={
-        user.playlistCount && `${user.playlistCount} public playlists`
+        user?.playlistCount && `${user.playlistCount} public playlists`
       }
       img="https://media.istockphoto.com/id/1338134336/photo/headshot-portrait-african-30s-man-smile-look-at-camera.jpg?b=1&s=170667a&w=0&k=20&c=j-oMdWCMLx5rIx-_W33o3q3aW9CiAWEvv9XrJQ3fTMU="
       roundImage
@@ -25,7 +25,7 @@ const Home = ({ artists }) => {
           <Text fontSize="sm">only visible to you</Text>
         </Box>
         <Flex>
-          {artists.map((artist) => (
+          {artists?.map((artist) => (
             <Box paddingLeft="10px" width="20%">
               <Box bg="gray.900" borderRadius="4px" padding="15px" width="100%">
                 <Image
