@@ -6,7 +6,7 @@ import prisma from '../../lib/prisma'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const salt = bcrypt.genSaltSync()
-  const { email, password, name } = req.body
+  const { email, password, firstName, lastName } = req.body
 
   let user
 
@@ -15,7 +15,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       data: {
         email,
         password: bcrypt.hashSync(password, salt),
-        name,
+        firstName,
+        lastName,
       },
     })
   } catch (e) {

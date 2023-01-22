@@ -9,7 +9,7 @@ const GradientLayout: FC<{
   description: string
   color: string
   roundImage?: boolean
-}> = ({ img, title, subtitle, description, color, roundImage }) => {
+}> = ({ img, title, subtitle, description, color, roundImage, children }) => {
   return (
     <Box
       height="100% "
@@ -34,6 +34,7 @@ const GradientLayout: FC<{
           <Text fontSize="x-small">{description}</Text>
         </Box>
       </Flex>
+      <Box paddingY="50px">{children}</Box>
     </Box>
   )
 }
