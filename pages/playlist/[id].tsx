@@ -40,8 +40,10 @@ export const getServerSideProps = async ({ query, req }) => {
     user = validateToken(req.cookies.TRAX_ACCESS_TOKEN)
   } catch (error) {
     return {
-      permanent: false,
-      path: 'signin',
+      redirect: {
+        permanent: false,
+        destination: '/signin',
+      },
     }
   }
 
