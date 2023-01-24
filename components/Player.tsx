@@ -198,7 +198,7 @@ const Player = ({ songs, activeSong }) => {
               min={0}
               step={0.1}
               id="player-range"
-              max={duration ? duration.toFixed(2) : 0}
+              max={duration ? (duration.toFixed(2) as unknown as number) : 0}
               onChange={onSeek}
               value={[seek]} // always need to pass an array / RangeSlide specific
               onChangeStart={() => setIsSeeking(true)}
